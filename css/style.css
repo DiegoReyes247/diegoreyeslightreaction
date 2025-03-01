@@ -1,0 +1,425 @@
+
+/*titulos*/
+h1 {text-align: center;
+    font-size: 5vw;   
+    margin-top: 2%;
+    margin-bottom: 2%;   
+}
+h3{text-align: center;}
+h6{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+/*tipos de letras*/
+body {
+    font-family: Arial;
+ }
+/*pie de pagina*/
+footer {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #10121163;
+        
+ }
+
+ .ubicacion, .wasap, .insta {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido en pantallas pequeñas */
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+i {
+    color: black;
+}
+
+
+/*nav bar-------------------------------------------------------*/
+.custom-navbar {
+    background-color: #10121163;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+.banner {      /*logo navbar*/
+    height: 4rem;
+}
+
+.navbar-brand {
+    margin-left: auto; 
+    padding-left: 3rem;
+  }
+ul {
+    list-style-type: none;
+}
+li a {text-decoration: none;
+    color: black;
+}
+.navbar{
+    margin-right: 7rem;
+    width: 100%;
+    gap: 1rem;
+}
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 8rem; 
+  }
+
+/*collage del home*/
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: repeat(3, 13rem); /* Tres filas con 200px de altura */
+    gap: 1rem; /* Espacio entre las imágenes */
+    width: 90vw; /* Ancho del contenedor */
+    margin: auto; /* Centra el contenedor */
+    grid-template-areas: 
+            "leolo punta2 judoline"
+             "leolo centro judoline"
+             " leolo punta1 singleleg";
+}
+.collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes cubran las celdas */
+    border-radius: 1rem; /* Bordes redondeados opcionales */
+}  
+.leolo {
+    grid-area: leolo;
+}
+.centro {
+    grid-area: centro;
+}
+.judoline {
+    grid-area: judoline;
+    object-fit: cover;   
+}
+.punta1 {
+    grid-area: punta1;
+
+}
+.punta2 {
+    grid-area: punta2;
+}
+.singleleg {
+    grid-area: singleleg;
+}
+/* grilla de contact*/
+.contactinfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 4%;
+    grid-template-areas:    "contact_table pricest"
+                            "contact_table prices"
+                            "contact_table infot"
+                            "contact_table info";
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: center;
+}
+ 
+th, td{ border: 0.0625rem solid}
+
+.pricest{
+    grid-area: pricest;
+    margin-bottom: 0.5rem;}
+
+.infot{
+        grid-area: infot;
+        margin-top: 0.3rem;
+        margin-bottom: 0.1rem;}
+
+.contact_table {grid-area: contact_table;}
+
+.prices { border-collapse: collapse;
+    border: 0.0625rem solid ;
+    table-layout: fixed;
+    grid-area: prices;
+    margin-bottom: 0.5rem;    }
+    
+.info {border-collapse: collapse;
+    border: 0.0625rem solid ;
+    table-layout: fixed;
+    text-align: left;
+    grid-area: info;}
+
+/*formulario*/
+form {
+        display: flex;
+        flex-direction: column; 
+        width: 18rem; 
+        padding: 2rem;
+        border: 1px solid;
+        border-radius: 0.31rem;
+
+      }
+/*imagesgeneral*/
+.nogiindex {
+    width: 50%; /* Ajusta el porcentaje según lo que necesites */
+    height: auto;
+    margin: auto; /* Centra la imagen */
+    display: block; /* Hace que la imagen se comporte como un bloque */
+  }
+
+.nogiimages {width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;}
+.giimages{width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;}
+/*tablas*/
+.schedule {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.0625rem solid ;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+/* Contenedor que envuelve el video */
+.video-container {
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho de su contenedor padre */
+    max-width: 600px; /* Define el tamaño máximo del video */
+    margin: 0 auto; /* Centra el video horizontalmente */
+    padding-top: 56.25%; /* Relación de aspecto 16:9 (altura 56.25% del ancho) */
+    position: relative;
+  }
+  
+  /* El video dentro del contenedor */
+  .video-container video {
+    position: absolute; /* Coloca el video encima del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: 100%; /* El video ocupa el 100% del alto del contenedor */
+    object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
+  }
+/*grilla de pictures y videos*/
+.gallery {
+    gap: 20px; /* Espacio entre las celdas */
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    grid-template-rows: repeat(4, auto); /* 4 filas, de altura automática */
+    grid-template-areas:"gitext nogitext"
+                        "giimages nogiimages"
+                        "videotext videotext"
+                        "video-container video-container";
+    }
+    
+.item {
+        text-align: center; /* Centra el contenido dentro de cada celda */}
+
+/*media para tablets de hasta 1024px*/  
+@media screen and (min-width:769px){
+    /*navbar*/ 
+    nav {
+        flex-direction: row;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .navbar {
+        justify-content: flex-end;
+        flex-direction: row;
+
+    }
+
+    .banner {
+        margin-left: 0;
+        justify-content: left;
+    }
+
+    /* Collage */
+    .collage {
+        grid-template-columns: repeat(3, 1fr); /* Dos columnas en tablet */
+        grid-template-rows: repeat(3, auto); /* Aumentar el número de filas */
+        grid-template-areas: 
+            "leolo punta2 judoline"
+             "leolo centro judoline"
+             " leolo punta1 singleleg";
+    }
+
+    /* Contact info */
+    .contactinfo {
+        grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual tamaño */
+        grid-template-rows: 15% 25% 15% 25%;
+        gap: 5%;
+        grid-template-areas: 
+            "contact_table pricest"
+            "contact_table prices"
+            "contact_table infot"
+            "contact_table info";
+        margin: 2rem;
+        margin-bottom: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    /* Formulario */
+    form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 0,5rem;
+    }
+
+    .contactinfo {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 2,5rem;}
+   
+}
+/*media para celulares de hasta 768px*/  
+@media screen and (min-width:577px) and (max-width:768px){
+    /*navbar*/
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      .navbar-collapse {
+        text-align: center; 
+      }
+    
+      .navbar-nav {
+        width: 100%; 
+        justify-content: center; 
+      }
+    
+      .nav-item {
+        margin-left: 0; 
+        margin-right: 0;
+      }
+     
+        /* Nav bar */
+        nav {
+            
+            height: auto;
+        }
+    
+        .navbar {
+            margin-right: 1rem;
+            
+            
+        }
+    
+        .banner {
+            margin-left: 3rem;
+        }
+    
+        /* Collage */
+        .collage {
+            grid-template-columns: repeat(3, 1fr); /* Dos columnas en tablet */
+            grid-template-rows: repeat(3, auto); /* Aumentar el número de filas */
+            grid-template-areas: 
+            "leolo punta2 judoline"
+             "leolo centro judoline"
+             " leolo punta1 singleleg";
+        }
+        .day-header {
+            font-size: 0.7rem; /* Reducir el tamaño de la fuente */
+          }
+          .schedule td, .schedule th {
+            font-size: 0.7rem; }
+    
+        /* Contact info */
+        .contactinfo {
+            grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual tamaño */
+        grid-template-rows: 7% 27% 35% 25%;
+        grid-template-areas:    "pricest infot"
+                                "prices info"
+                                "contact_table contact_table"
+                                "contact_table contact_table";;}
+        .pricest{font-size: 1.125rem;
+            margin-top: 3.125rem;}
+        .prices { 
+                margin-bottom: 0.1rem;    }
+        .infot{font-size: 1.125rem;
+                margin-top: 3.125rem;}
+        .info {margin-bottom: 0.1rem;}
+            
+            /*formulario*/
+        form {
+                    display: flex;
+                    flex-direction: column; 
+                    width: 100%; 
+                    padding: 0.1rem;
+                }
+    
+        /* Footer */
+        footer {
+            flex-direction: row;
+            
+        }
+    
+        .ubicacion, .wasap, .insta {
+            padding: 0.2rem;
+
+        }
+    }
+@media(max-width:576px){
+    .day-header {
+        font-size: 0.43rem; 
+      }
+      .schedule td, .schedule th {
+        font-size: 0.43rem; }
+        .contactinfo {
+            grid-template-columns:  1fr;
+            grid-template-rows: 5% 10% 5% 10% 60%;
+            grid-template-areas:    
+            "pricest"
+            "prices"
+            "infot"
+            "info"
+            "contact_table";}
+
+
+            .pricest{font-size: 0.8rem;
+            margin-top: 0.5rem;}
+            .prices { 
+                margin-bottom: 0.5rem;
+                font-size: 0.8rem    }
+            .infot{font-size: 0.8rem;
+                margin-top: 0.5rem;}
+            .info {margin-bottom: 0.5rem;
+                font-size: 0.8rem}
+            
+            /*formulario*/
+            form {
+                    display: flex;
+                    flex-direction: column; 
+                    width: 100%; 
+                    padding: 0.1rem;
+                }
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      .navbar-collapse {
+        text-align: center; 
+      }
+    
+      .navbar-nav {
+        width: 100%; 
+        justify-content: center; 
+      }
+    
+      .nav-item {
+        margin-left: 0; 
+        margin-right: 0;
+      }
+
+    }
+        
+    
