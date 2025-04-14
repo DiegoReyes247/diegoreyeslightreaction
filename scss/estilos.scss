@@ -189,7 +189,10 @@ footer {
     }
   }
   
-  
+  .nogiindex {
+    animation: cambiarImagen 25s infinite ease-in-out;
+  }
+
   .nogiindex:nth-child(1) {
     animation-delay: 0s; /* La primera imagen aparece al principio */
   }
